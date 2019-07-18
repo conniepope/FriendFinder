@@ -1,8 +1,8 @@
-app.get("/api/friends", function(req, res) {
+app.get("app/data/friends", function(req, res) {
     return res.json(friends);
   });
 
-app.post("/api/friends", function(req, res) {
+app.post("app/data/friends", function(req, res) {
 
     var newFriend = req.body;
 
