@@ -1,26 +1,46 @@
-app.get("api/friends", function(req, res) {
-    return res.json(friends);
-  });
+// LOAD DATA ---------------------------
 
-app.post("api/friends", function(req, res) {
+var friends = require("../data/friends");
 
-    var newFriend = document.getElementById("name").value;
+// ROUTING -----------------------------
 
-    newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
+module.exports = function(app) {
 
-    console.log(newFriend);
+    // API GET Requests ----------
 
-    friends.push(newFriend);
+    app.get("/api/friends", function(req, res) {
+        res.json(friends);
+    
+     // res.send(name + ' ' + photo + ' ' + options);
+     // return res.json(friends);
 
-    res.json(newFriend);
-});
+    });
+
+    // API POST Requests ----------
+
+    app.post("/api/friends", function(req, res) {
+    
+        var newFriend = req.body;
+    
+        newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
+    
+        console.log(newFriend);
+    
+        friends.push(newFriend);
+    
+        res.json(newFriend);
+    });
+
+}
+
+//  NEXT STEP: GETTING JQUERY TO WORK TO PULL INFO FROM SURVEY
 
 // LOGIC ---------------------------------------------
-var newName = document.getElementById("name").value;
-var newImage = document.getElementById("photo-image").value;
+var newName = $("#name").value;
+var newImage = $("#photo-image").value;
 //take in the answers of all of the questions
 var newAnswerArray = [];
-var questions = document.getElementByClassName("options").value;
+var questions = $("#options").value;
 console.log(questions)
 // .push(newAnswerArray);
 // var Q2 = document.getElementById("options-2").value.push(newAnswerArray);
@@ -45,3 +65,4 @@ console.log(questions)
 // * The closest match will be the user with the least amount of difference.
 
 //display the result as a modal pop-up. The modal should display both the name and picture of the closest match.
+

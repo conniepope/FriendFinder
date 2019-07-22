@@ -204,8 +204,28 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <!-- JAVASCRIPT -->
         <script src="data/friends.js"></script>
-        <script src="routing/apiRoutes.js"></script>
-        <script src="routing/htmlRoutes.js"></script>
+        <!-- <script src="routing/apiRoutes.js"></script>
+        <script src="routing/htmlRoutes.js"></script> -->
+
+        <script type="text/javascript">
+            $("#submit").on("click", function() {
+              event.preventDefault();
+           
+              var friendsObj = {
+                name: $("#name").val().trim(),
+                image: $("#photo-image").val().trim(),
+                questions: $("#options").val().trim(),
+              }
+        
+              console.log(friendsObj)
+              $.post("/api/friends", friendsObj)
+                .then(function(data) {
+                  console.log(data);
+                  alert("Your survey has been submitted.")
+                  console.log(friendsObj)
+                })
+            })
+        </script>
 
 </body>
 </html>

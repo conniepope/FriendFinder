@@ -1,3 +1,5 @@
+// DATA --------------------------------
+
 var friends = [
     {
         "name":"Connie",
@@ -16,3 +18,6 @@ var friends = [
           ]
     },
 ]
+
+
+module.exports = friends;
