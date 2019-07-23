@@ -36,14 +36,11 @@ module.exports = function(app) {
 //  NEXT STEP: GETTING JQUERY TO WORK TO PULL INFO FROM SURVEY
 
 // LOGIC ---------------------------------------------
-var newName = $("#name").value;
-var newImage = $("#photo-image").value;
-//take in the answers of all of the questions
-var newAnswerArray = [];
-var questions = $("#options").value;
-console.log(questions)
-// .push(newAnswerArray);
-// var Q2 = document.getElementById("options-2").value.push(newAnswerArray);
+
+
+
+
+// var Q2 = $("options-2").value.push(newAnswerArray);
 // var Q3 = document.getElementById("options-3").value.push(newAnswerArray);
 // var Q4 = document.getElementById("options-4").value.push(newAnswerArray);
 // var Q5 = document.getElementById("options-5").value.push(newAnswerArray);

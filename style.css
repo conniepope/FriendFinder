@@ -1,0 +1,29 @@
+.jumbotron {
+    margin-bottom: 0px;
+}
+
+#button {
+    background-color: #0099cc;
+    border: none;
+}
+
+#link {
+    color: #0099cc;
+}
+
+h2 {
+   padding-top: 20px;
+}
+
+#select {
+    color: gray;
+}
+
+h4 {
+    padding-top: 20px;
+}
+
+.submit-button {
+    padding-top: 20px;
+}
+
