@@ -275,16 +275,14 @@
                 //display the result as a modal pop-up. The modal should display both the name and picture of the closest match.
                 $("#perfectFriendModal").modal("show");
                 $("#perfectFriendName").text(data.name);
-                $("#perfectFriendPhoto").attr("src", data.image);
+                $("#perfectFriendPhoto").attr("src", data.photo);
                 // friends.push(friendsObj);
 
             });
 
             // Clear the form when submitting
             $(".form")[0].reset();
-            // $("#name").val("");
-            // $("#photo-image").val("");
-            // $("#questions").val("");
+
         } else {
             alert("Survey is incomplete. Please answer all questions and required fields before submitting.")
         }
