@@ -1,6 +1,6 @@
 // LOAD DATA ---------------------------
 
-var friends = require("../data/friends.js");
+var friends = require("../data/friends");
 
 // ROUTING -----------------------------
 

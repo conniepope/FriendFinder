@@ -1,21 +1,23 @@
+body {
+    background-color: #0099cc;
+}
+
 .jumbotron {
     margin-bottom: 0px;
+    margin-top: 20px;
 }
 
 #button {
     background-color: #0099cc;
     border: none;
-}
-
-#link {
-    color: #0099cc;
+    margin-top: 20px;
 }
 
 h2 {
    padding-top: 20px;
 }
 
-#select {
+select {
     color: gray;
 }
 
@@ -31,4 +33,9 @@ h4 {
     background-color: #0099cc;
     border: none;
 } 
+
+#survey {
+    background-color: rgb(236, 233, 233);
+    border-radius: 20px;
+}
 
