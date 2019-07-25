@@ -67,7 +67,7 @@ var friends = [
     },
     {
         "name":"Lana",
-        "photo":"https://tinyurl.com/y69sbzpo",
+        "photo":"https://tinyurl.com/y28t3ara",
         "questions":[
             "3",
             "5",
